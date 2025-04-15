@@ -86,7 +86,29 @@
       padding: 20px;
       font-size: 14px;
     }
+    .area {
+      margin-bottom: 10px;
+    }
+    .area button {
+      border: none;
+      background: transparent;
+      cursor: pointer;
+      font-size: 16px;
+      margin-left: 8px;
+    }
+    .area-desc {
+      display: none;
+      margin-left: 20px;
+      font-size: 14px;
+      color: #444;
+    }
   </style>
+  <script>
+    function toggleDesc(id) {
+      const desc = document.getElementById(id);
+      desc.style.display = desc.style.display === 'block' ? 'none' : 'block';
+    }
+  </script>
 </head>
 <body>
   <header>
@@ -108,14 +130,24 @@
 
   <section id="areas">
     <h2>Áreas de Atuação</h2>
-    <ul>
-      <li>Direito Civil</li>
-      <li>Direito Empresarial</li>
-      <li>Direito Trabalhista</li>
-      <li>Direito Tributário</li>
-      <li>Direito de Família</li>
-      <li>Direito à Saúde</li>
-    </ul>
+    <div class="area">Direito Civil <button onclick="toggleDesc('desc1')">▼</button>
+      <div id="desc1" class="area-desc">Atuação em conflitos contratuais, responsabilidade civil, obrigações e mais.</div>
+    </div>
+    <div class="area">Direito Empresarial <button onclick="toggleDesc('desc2')">▼</button>
+      <div id="desc2" class="area-desc">Consultoria e contencioso empresarial, estruturação de sociedades e compliance.</div>
+    </div>
+    <div class="area">Direito Trabalhista <button onclick="toggleDesc('desc3')">▼</button>
+      <div id="desc3" class="area-desc">Defesa de direitos trabalhistas individuais e coletivos, ações e negociações.</div>
+    </div>
+    <div class="area">Direito Tributário <button onclick="toggleDesc('desc4')">▼</button>
+      <div id="desc4" class="area-desc">Planejamento e defesa em questões fiscais, tributos diretos e indiretos.</div>
+    </div>
+    <div class="area">Direito de Família <button onclick="toggleDesc('desc5')">▼</button>
+      <div id="desc5" class="area-desc">Separações, guarda, alimentos, inventários e mediações familiares.</div>
+    </div>
+    <div class="area">Direito à Saúde <button onclick="toggleDesc('desc6')">▼</button>
+      <div id="desc6" class="area-desc">Defesa do acesso a tratamentos, medicamentos e direitos dos pacientes.</div>
+    </div>
   </section>
 
   <section id="contato">
