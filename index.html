@@ -140,34 +140,81 @@
   </nav>
 
   <form id="contactForm">
-  <label for="name">Nome:</label>
-  <input type="text" id="name" name="name" placeholder="Digite seu nome" required>
-
-  <label for="email">E-mail:</label>
-  <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
-
-  <label for="message">Relato:</label>
-  <textarea id="message" name="message" placeholder="Conte seu caso" required></textarea>
-
-  <button type="button" id="submitButton">Enviar pelo WhatsApp</button>
-</form>
-
-<script>
-  document.getElementById("submitButton").addEventListener("click", function () {
-    const name = document.getElementById("name").value;
-    const email = document.getElementById("email").value;
-    const message = document.getElementById("message").value;
-
-    if (name && email && message) {
-      const whatsappNumber = "5581989099929";
-      const text = `Olá, meu nome é ${encodeURIComponent(name)}.\nE-mail: ${encodeURIComponent(email)}\nRelato: ${encodeURIComponent(message)}`;
-      const whatsappLink = `https://wa.me/${whatsappNumber}?text=${text}`;
-      window.open(whatsappLink, "_blank");
-    } else {
-      alert("Por favor, preencha todos os campos antes de enviar.");
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulário para WhatsApp</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
     }
-  });
-</script>
+    form {
+      max-width: 400px;
+      margin: auto;
+    }
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+    input, textarea, button {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    button {
+      background-color: #25D366;
+      color: white;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    button:hover {
+      background-color: #1DA851;
+    }
+  </style>
+</head>
+<body>
+  <h1>Conte seu caso</h1>
+  <form id="whatsappForm">
+    <label for="name">Nome:</label>
+    <input type="text" id="name" name="name" placeholder="Digite seu nome" required>
+
+    <label for="email">E-mail:</label>
+    <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
+
+    <label for="message">Relato:</label>
+    <textarea id="message" name="message" rows="5" placeholder="Conte seu caso" required></textarea>
+
+    <button type="button" id="sendButton">Enviar pelo WhatsApp</button>
+  </form>
+
+  <script>
+    document.getElementById("sendButton").addEventListener("click", function () {
+      const name = document.getElementById("name").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const message = document.getElementById("message").value.trim();
+
+      if (name && email && message) {
+        const whatsappNumber = "5581989099929"; // Número do WhatsApp com código do país e DDD
+        const text = `Olá, meu nome é ${encodeURIComponent(name)}.%0A` +
+                     `Meu e-mail é: ${encodeURIComponent(email)}.%0A` +
+                     `Meu relato: ${encodeURIComponent(message)}.%0A` +
+                     `Gostaria de mais informações.`;
+        const whatsappLink = `https://wa.me/${whatsappNumber}?text=${text}`;
+        window.open(whatsappLink, "_blank");
+      } else {
+        alert("Por favor, preencha todos os campos antes de enviar.");
+      }
+    });
+  </script>
+</body>
+</html>
 
   <section id="sobre">
     <h2>Sobre Nós</h2>
