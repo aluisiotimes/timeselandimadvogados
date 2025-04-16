@@ -94,6 +94,16 @@
       text-align: center;
       color: #2c4a4a;
     }
+    .area {
+      margin-bottom: 15px;
+      font-weight: bold;
+    }
+    .area-desc {
+      margin-top: 5px;
+      margin-left: 20px;
+      font-weight: normal;
+      display: none;
+    }
     footer {
       background-color: #e5ecec;
       text-align: center;
@@ -129,7 +139,24 @@
 
   <section id="areas">
     <h2>Áreas de Atuação</h2>
-    <p>Atuamos em diversas áreas do Direito, com destaque para Direito Civil, Direito do Consumidor, Direito de Família e Sucessões, Direito Trabalhista, Direito Empresarial e Direito Previdenciário. Nosso objetivo é oferecer soluções jurídicas eficazes e personalizadas para cada demanda, sempre com ética, eficiência e compromisso com o cliente.</p>
+    <div class="area">Direito Civil <button onclick="toggleDesc('desc1')">▼</button>
+      <div id="desc1" class="area-desc">Atuação em conflitos contratuais, responsabilidade civil, obrigações e mais.</div>
+    </div>
+    <div class="area">Direito Empresarial <button onclick="toggleDesc('desc2')">▼</button>
+      <div id="desc2" class="area-desc">Consultoria e contencioso empresarial, estruturação de sociedades e compliance.</div>
+    </div>
+    <div class="area">Direito Trabalhista <button onclick="toggleDesc('desc3')">▼</button>
+      <div id="desc3" class="area-desc">Defesa de direitos trabalhistas individuais e coletivos, ações e negociações.</div>
+    </div>
+    <div class="area">Direito Tributário <button onclick="toggleDesc('desc4')">▼</button>
+      <div id="desc4" class="area-desc">Planejamento e defesa em questões fiscais, tributos diretos e indiretos.</div>
+    </div>
+    <div class="area">Direito de Família <button onclick="toggleDesc('desc5')">▼</button>
+      <div id="desc5" class="area-desc">Separações, guarda, alimentos, inventários e mediações familiares.</div>
+    </div>
+    <div class="area">Direito à Saúde <button onclick="toggleDesc('desc6')">▼</button>
+      <div id="desc6" class="area-desc">Defesa do acesso a tratamentos, medicamentos e direitos dos pacientes.</div>
+    </div>
   </section>
 
   <section id="contato">
@@ -141,7 +168,7 @@
   </section>
 
   <section>
-    <h2>Nosso Time</h2>
+    <h2>Profissionais</h2>
     <div class="colaboradores">
       <div class="colaborador"><img src="tomaz.png" alt="Tomaz Times"><span>Tomaz Times</span></div>
       <div class="colaborador"><img src="pedro-landim.jpg" alt="Pedro Landim"><span>Pedro Landim</span></div>
@@ -161,18 +188,12 @@
 
   <script>
     function translateSite() {
-      document.documentElement.lang = 'en';
-      document.querySelectorAll('nav a')[0].innerText = 'About Us';
-      document.querySelectorAll('nav a')[1].innerText = 'Practice Areas';
-      document.querySelectorAll('nav a')[2].innerText = 'Innovation';
-      document.querySelectorAll('nav a')[3].innerText = 'Privacy';
-      document.querySelectorAll('nav a')[4].innerText = 'Internship Program';
-      document.querySelectorAll('nav a')[5].innerText = 'Contact';
-      document.querySelector('h2').innerText = 'About Us';
-      document.querySelector('#areas h2').innerText = 'Practice Areas';
-      document.querySelector('#contato h2').innerText = 'Contact';
-      document.querySelector('.cta-button').innerText = 'Tell us your case';
-      document.querySelector('.language-toggle').innerText = 'PT';
+      alert("Tradução para inglês em desenvolvimento.");
+    }
+
+    function toggleDesc(id) {
+      const el = document.getElementById(id);
+      el.style.display = el.style.display === 'block' ? 'none' : 'block';
     }
   </script>
 </body>
