@@ -53,6 +53,11 @@
       box-shadow: 0 4px 6px rgba(0,0,0,0.1);
       text-align: justify;
     }
+    h2 {
+      font-family: Arial, sans-serif;
+      font-size: 12px;
+      font-style: normal;
+    }
     .cta-button {
       display: block;
       width: fit-content;
@@ -104,6 +109,14 @@
       font-weight: normal;
       display: none;
     }
+    .area button {
+      background: none;
+      border: none;
+      color: #2c4a4a;
+      font-size: 14px;
+      cursor: pointer;
+      padding: 0;
+    }
     footer {
       background-color: #e5ecec;
       text-align: center;
@@ -120,7 +133,6 @@
 
   <nav>
     <a href="#sobre">Sobre Nós</a>
-    <a href="#areas">Áreas de Atuação</a>
     <a href="inovacao.html">Inovação</a>
     <a href="privacidade.html">Privacidade</a>
     <a href="estagio.html">Programa de Estágio</a>
@@ -139,22 +151,22 @@
 
   <section id="areas">
     <h2>Áreas de Atuação</h2>
-    <div class="area">Direito Civil <button onclick="toggleDesc('desc1')">▼</button>
+    <div class="area">Direito Civil <button onclick="toggleDesc('desc1')">&#9660;</button>
       <div id="desc1" class="area-desc">Atuação em conflitos contratuais, responsabilidade civil, obrigações e mais.</div>
     </div>
-    <div class="area">Direito Empresarial <button onclick="toggleDesc('desc2')">▼</button>
+    <div class="area">Direito Empresarial <button onclick="toggleDesc('desc2')">&#9660;</button>
       <div id="desc2" class="area-desc">Consultoria e contencioso empresarial, estruturação de sociedades e compliance.</div>
     </div>
-    <div class="area">Direito Trabalhista <button onclick="toggleDesc('desc3')">▼</button>
+    <div class="area">Direito Trabalhista <button onclick="toggleDesc('desc3')">&#9660;</button>
       <div id="desc3" class="area-desc">Defesa de direitos trabalhistas individuais e coletivos, ações e negociações.</div>
     </div>
-    <div class="area">Direito Tributário <button onclick="toggleDesc('desc4')">▼</button>
+    <div class="area">Direito Tributário <button onclick="toggleDesc('desc4')">&#9660;</button>
       <div id="desc4" class="area-desc">Planejamento e defesa em questões fiscais, tributos diretos e indiretos.</div>
     </div>
-    <div class="area">Direito de Família <button onclick="toggleDesc('desc5')">▼</button>
+    <div class="area">Direito de Família <button onclick="toggleDesc('desc5')">&#9660;</button>
       <div id="desc5" class="area-desc">Separações, guarda, alimentos, inventários e mediações familiares.</div>
     </div>
-    <div class="area">Direito à Saúde <button onclick="toggleDesc('desc6')">▼</button>
+    <div class="area">Direito à Saúde <button onclick="toggleDesc('desc6')">&#9660;</button>
       <div id="desc6" class="area-desc">Defesa do acesso a tratamentos, medicamentos e direitos dos pacientes.</div>
     </div>
   </section>
@@ -165,7 +177,6 @@
     <p><strong>Email:</strong> aluisio@timesadvogados.com.br</p>
     <p><strong>Telefone:</strong> (81) 3032-3633</p>
     <p><strong>Endereço:</strong> R. Padre Carapuceiro, nº 968 - sls 901/902 - Boa Viagem, Recife - PE, 51020-000</p>
-    <a class="cta-button" href="https://wa.me/5581989099929" target="_blank">Agende uma conversa</a>
   </section>
 
   <section>
@@ -180,6 +191,7 @@
       <div class="colaborador"><img src="mateus-cavalcanti.jpg" alt="Mateus Cavalcanti"><span>Mateus Cavalcanti</span></div>
       <div class="colaborador"><img src="guido-agustinho.jpg" alt="Guido Agustinho"><span>Guido Agustinho</span></div>
       <div class="colaborador"><img src="aluisio-times.jpg" alt="Aluisio Times"><span>Aluisio Times</span></div>
+      <div class="colaborador"><img src="nayara-cavalcanti.jpg" alt="Nayara Cavalcanti"><span>Nayara Cavalcanti</span></div>
     </div>
   </section>
 
