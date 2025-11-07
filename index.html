@@ -1,129 +1,396 @@
-<!DOCTYPE html>
-<html lang="pt-br">
+
+<!doctype html>
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Aluísio Times Advocacia</title>
-  <meta name="robots" content="index, follow">
-  <meta name="description" content="Aluísio Times Advocacia - Escritório especializado em Direito Civil, Trabalhista, Empresarial, Tributário, Família e Saúde.">
+  <meta charset="utf-8">
+  <title>BPC/LOAS — Verifique sua elegibilidade agora</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description"
+        content="BPC/LOAS: você pode receber 1 salário mínimo vigente sem nunca ter contribuído. Avaliação gratuita. Atendimento jurídico especializado.">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #f9f9f9;
-      color: #2c4a4a;
+    :root{
+      /* Paleta alinhada (navy/dourado/bege) */
+      --brand-navy:#0C1E33;
+      --brand-navy-2:#122742;
+      --brand-gold:#C9A227;
+      --brand-gold-2:#A3841F;
+      --brand-beige:#F7F3EB;
+      --white:#FFFFFF;
+
+      --gray-900:#1F2937;
+      --gray-700:#374151;
+      --gray-500:#6B7280;
+      --gray-300:#D1D5DB;
+      --gray-200:#E5E7EB;
+
+      --focus:#93C5FD;
+      --radius:14px;
+      --shadow:0 10px 30px rgba(0,0,0,.08);
+      --max:1120px;
     }
-    header {
-      background-color: #e5ecec;
-      padding: 20px;
-      text-align: center;
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0}
+    body{
+      font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+      color:var(--gray-900);
+      background:var(--white);
+      line-height:1.5;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
     }
-    header h1 {
-      margin: 0;
-      font-size: 24px;
-      color: #2c4a4a;
+    a{color:var(--brand-gold);text-decoration:none}
+    a:focus, button:focus, input:focus, select:focus, textarea:focus{outline:3px solid var(--focus);outline-offset:2px}
+    .container{max-width:var(--max);margin:auto;padding:0 20px}
+
+    /* BOTÕES E CHIPS COM AJUSTE RESPONSIVO DE FONTE */
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;
+      border:0;border-radius:12px;
+      padding:12px 16px;
+      font-weight:700;
+      cursor:pointer;white-space:nowrap;
+      transition:.2s transform ease, .2s box-shadow ease; box-shadow:var(--shadow);
+      font-size:clamp(14px, 1.6vw, 16px);
+      line-height:1.1; min-height:44px;
+      max-width:100%;
     }
-    section {
-      max-width: 1000px;
-      margin: 40px auto;
-      padding: 20px;
-      background: white;
-      border-radius: 8px;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-      text-align: justify;
+    .btn span{display:block;overflow:hidden;text-overflow:ellipsis}
+    .btn:hover{transform:translateY(-1px)}
+    .btn-primary{background:var(--brand-gold);color:var(--brand-navy)}
+    .btn-outline-white{background:transparent;color:var(--white);border:2px solid rgba(255,255,255,.85)}
+    .btn-outline-gold{background:transparent;color:var(--brand-gold);border:2px solid var(--brand-gold)}
+    .btn-block{width:100%}
+    .chip{
+      display:inline-flex;align-items:center;justify-content:center;
+      padding:8px 12px;border-radius:999px;border:1px solid rgba(201,162,39,.35);
+      background:rgba(201,162,39,.12);color:#fff;
+      font-size:clamp(12px, 1.4vw, 13px);
+      line-height:1.1; white-space:nowrap; max-width:100%;
     }
-    h2 {
-      font-family: Arial, sans-serif;
-      font-size: 16px;
-      font-style: normal;
+
+    header.hero{
+      background:linear-gradient(180deg,var(--brand-navy), var(--brand-navy-2));
+      color:var(--white); padding:42px 0 28px
     }
-    .cta-button {
-      display: block;
-      width: fit-content;
-      margin: 20px auto;
-      padding: 12px 24px;
-      background-color: #2c4a4a;
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-      border-radius: 5px;
-      transition: background-color 0.3s;
+    .brand{display:flex;align-items:center;gap:12px;margin-bottom:16px}
+    .brand .logo{
+      width:38px;height:38px;border-radius:8px;background:var(--brand-gold);display:grid;place-items:center;color:var(--brand-navy);font-weight:700
     }
-    .cta-button:hover {
-      background-color: #1e3232;
+    .hero-grid{display:grid;gap:28px;align-items:center}
+    @media(min-width:900px){.hero-grid{grid-template-columns:1.15fr .85fr}}
+    h1{font-size:clamp(26px,3.2vw,42px);line-height:1.18;margin:0 0 12px}
+    .subtitle{font-size:clamp(15px,1.8vw,18px);opacity:.95;margin-bottom:18px}
+    .badges{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0 18px}
+
+    .hero-cta{display:flex;gap:10px;flex-wrap:wrap}
+    .note{font-size:clamp(11px,1.5vw,12.5px);opacity:.9;margin-top:12px}
+    .card{
+      background:var(--white);border:1px solid var(--gray-200);border-radius:var(--radius);box-shadow:var(--shadow)
     }
-    .area {
-      margin-bottom: 15px;
-      font-weight: bold;
+    .panel{padding:18px}
+    .kpis{display:grid;gap:12px}
+    .kpi{display:flex;gap:10px;align-items:flex-start}
+    .kpi .dot{flex:0 0 10px;width:10px;height:10px;border-radius:50%;background:var(--brand-gold);margin-top:6px}
+    .kpi p{margin:0;font-size:clamp(14px,1.6vw,16px)}
+
+    section{padding:48px 0}
+    .section-title{font-size:clamp(22px,2.4vw,28px);margin:0 0 8px;color:var(--brand-navy)}
+    .section-sub{color:var(--gray-700);margin:0 0 18px;font-size:clamp(14px,1.6vw,16px)}
+
+    .features{display:grid;gap:12px}
+    @media(min-width:900px){.features{grid-template-columns:repeat(3,1fr)}}
+    .feature{border:1px solid var(--gray-200);border-radius:12px;padding:16px;background:var(--brand-beige)}
+    .feature h3{margin:0 0 6px;font-size:clamp(16px,1.8vw,18px);color:var(--brand-navy)}
+    .feature p{margin:0;font-size:clamp(13px,1.6vw,15px)}
+
+    .steps{display:grid;gap:12px}
+    @media(min-width:900px){.steps{grid-template-columns:repeat(4,1fr)}}
+    .step{border:1px dashed var(--gray-300);border-radius:12px;padding:16px;background:#fff}
+    .step strong{display:block;margin-bottom:6px;font-size:clamp(15px,1.8vw,17px)}
+    .step p{margin:0;font-size:clamp(13px,1.6vw,15px)}
+
+    .bullets{margin:0;padding-left:18px}
+    .bullets li{margin:8px 0;font-size:clamp(14px,1.6vw,16px)}
+
+    .faq{display:grid;gap:10px}
+    .faq details{border:1px solid var(--gray-200);border-radius:12px;padding:12px;background:#fff}
+    .faq summary{font-size:clamp(14px,1.7vw,16px);cursor:pointer}
+    .faq p{font-size:clamp(13px,1.6vw,15px)}
+
+    .lead-form{
+      display:grid;gap:12px;grid-template-columns:1fr
     }
-    .area-desc {
-      margin-top: 5px;
-      margin-left: 20px;
-      font-weight: normal;
-      display: none;
+    @media(min-width:900px){.lead-form{grid-template-columns:repeat(2,1fr)}}
+    .lead-form .full{grid-column:1/-1}
+    label{font-weight:600;display:block;margin-bottom:6px;font-size:clamp(13px,1.6vw,15px)}
+    input, select, textarea{
+      width:100%;padding:12px 12px;border-radius:10px;border:1px solid var(--gray-200);background:#fff;
+      font-size:clamp(14px,1.6vw,16px)
     }
-    .area button {
-      background: none;
-      border: none;
-      color: #2c4a4a;
-      font-size: 14px;
-      cursor: pointer;
-      padding: 0;
+
+    .foot{
+      background:var(--brand-beige);border-top:1px solid var(--gray-200);font-size:14px;color:var(--gray-700)
     }
-    footer {
-      background-color: #e5ecec;
-      text-align: center;
-      padding: 20px;
-      font-size: 14px;
+    .foot .grid{display:grid;gap:16px}
+    @media(min-width:900px){.foot .grid{grid-template-columns:2fr 1fr 1fr}}
+    .whatsapp{display:inline-flex;align-items:center;gap:8px}
+
+    /* Salvaguardas adicionais para telas muito estreitas */
+    @media(max-width:380px){
+      .btn{padding:10px 12px;font-size:14px}
+      .chip{padding:6px 10px;font-size:12px}
+      .hero-cta{gap:8px}
     }
   </style>
+
+  <!-- FAQ Schema for SEO -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "mainEntity":[
+      {"@type":"Question","name":"Preciso ter contribuído para o INSS para receber o BPC/LOAS?",
+       "acceptedAnswer":{"@type":"Answer","text":"Não. O BPC/LOAS não exige contribuições prévias. O critério é assistencial e envolve renda familiar per capita dentro do limite legal, além de idade mínima (65+) ou deficiência."}},
+      {"@type":"Question","name":"Qual o valor do BPC?",
+       "acceptedAnswer":{"@type":"Answer","text":"O BPC corresponde a 1 salário mínimo vigente. O pagamento está sujeito à análise e ao cumprimento dos requisitos legais."}},
+      {"@type":"Question","name":"Posso acumular o BPC com outros benefícios?",
+       "acceptedAnswer":{"@type":"Answer","text":"Em regra, o BPC não pode ser acumulado com outros benefícios previdenciários (não assistenciais). Cada caso precisa ser analisado."}},
+      {"@type":"Question","name":"Como é feita a comprovação da renda?",
+       "acceptedAnswer":{"@type":"Answer","text":"Geralmente com base no CadÚnico, composição familiar e documentos de renda. Nossa equipe orienta sobre o checklist documental."}},
+      {"@type":"Question","name":"E se meu pedido for negado?",
+       "acceptedAnswer":{"@type":"Answer","text":"Há vias de recurso e medidas judiciais cabíveis. Atuamos do protocolo ao contencioso, quando necessário."}}
+    ]
+  }
+  </script>
 </head>
 <body>
-  <header>
-    <h1>ALUÍSIO TIMES ADVOCACIA</h1>
-  </header>
 
-  <a class="cta-button" href="https://wa.me/5581989099929" target="_blank">Conte seu caso</a>
+<header class="hero">
+  <div class="container">
+    <div class="brand">
+      <div class="logo" aria-hidden="true">AT</div>
+      <div>
+        <strong>Aluísio Times Adv</strong><br>
+        <span style="color:var(--brand-gold)">Atendimento jurídico especializado</span>
+      </div>
+    </div>
 
-  <section id="areas">
-    <h2>Áreas de Atuação</h2>
-    <div class="area">Direito Civil <button onclick="toggleDesc('desc1')">&#9660;</button>
-      <div id="desc1" class="area-desc">Atuação em conflitos contratuais, responsabilidade civil, obrigações e mais.</div>
+    <div class="hero-grid">
+      <div>
+        <h1>Você sabia que pode receber <u>1 salário mínimo</u> sem nunca ter contribuído?</h1>
+        <p class="subtitle">BPC/LOAS — Renda assistencial a quem mais precisa. Faça a triagem gratuita e descubra, em minutos, se você ou um familiar têm direito.</p>
+
+        <div class="badges" role="list" aria-label="Provas de confiança">
+          <span class="chip">Avaliação gratuita</span>
+          <span class="chip">Equipe especializada</span>
+          <span class="chip">Sigilo e segurança</span>
+        </div>
+
+        <div class="hero-cta">
+          <a href="#form" class="btn btn-primary"><span>Quero verificar minha elegibilidade</span></a>
+          <a class="btn btn-outline-white whatsapp"
+             href="https://wa.me/5581989099929?text=Ol%C3%A1,%20tenho%20interesse%20em%20saber%20se%20tenho%20direito%20ao%20benef%C3%ADcio%20BPC/LOAS."
+             target="_blank" rel="nofollow noopener">
+            <span>Falar com um especialista</span>
+          </a>
+        </div>
+
+        <p class="note">O BPC corresponde a <strong>1 salário mínimo vigente</strong>. Concessão sujeita à análise dos requisitos legais.</p>
+      </div>
+
+      <div class="card panel">
+        <h3 style="margin:0 0 8px;color:var(--brand-navy);font-size:clamp(18px,2vw,20px)">Checklist rápido</h3>
+        <div class="kpis">
+          <div class="kpi"><span class="dot"></span><p>Idoso(a) com <strong>65 anos ou mais</strong> <em>ou</em> pessoa com deficiência (qualquer idade)</p></div>
+          <div class="kpi"><span class="dot"></span><p><strong>Renda familiar per capita</strong> dentro do limite legal assistencial</p></div>
+          <div class="kpi"><span class="dot"></span><p>Preferencialmente com <strong>CadÚnico</strong> atualizado</p></div>
+        </div>
+      </div>
     </div>
-    <div class="area">Direito Empresarial <button onclick="toggleDesc('desc2')">&#9660;</button>
-      <div id="desc2" class="area-desc">Consultoria e contencioso empresarial, estruturação de sociedades e compliance.</div>
+  </div>
+</header>
+
+<main>
+
+  <section class="container" id="quem-tem-direito">
+    <h2 class="section-title">Quem tem direito</h2>
+    <p class="section-sub">Elegibilidade pautada em critérios legais objetivos. Atuamos com governança jurídica ponta a ponta.</p>
+    <div class="features">
+      <div class="feature">
+        <h3>Idosos (65+)</h3>
+        <p>Amparo para idosos em situação de vulnerabilidade socioeconômica, com foco em dignidade e inclusão.</p>
+      </div>
+      <div class="feature">
+        <h3>Pessoa com deficiência</h3>
+        <p>Independente de idade, mediante avaliação da deficiência e do impacto na vida independente e no trabalho.</p>
+      </div>
+      <div class="feature">
+        <h3>Renda per capita</h3>
+        <p>Apuração técnica da composição familiar e renda por pessoa conforme balizas assistenciais vigentes.</p>
+      </div>
     </div>
-    <div class="area">Direito Trabalhista <button onclick="toggleDesc('desc3')">&#9660;</button>
-      <div id="desc3" class="area-desc">Defesa de direitos trabalhistas individuais e coletivos, ações e negociações.</div>
-    </div>
-    <div class="area">Direito Tributário <button onclick="toggleDesc('desc4')">&#9660;</button>
-      <div id="desc4" class="area-desc">Planejamento e defesa em questões fiscais, tributos diretos e indiretos.</div>
-    </div>
-    <div class="area">Direito de Família <button onclick="toggleDesc('desc5')">&#9660;</button>
-      <div id="desc5" class="area-desc">Separações, guarda, alimentos, inventários e mediações familiares.</div>
-    </div>
-    <div class="area">Direito à Saúde <button onclick="toggleDesc('desc6')">&#9660;</button>
-      <div id="desc6" class="area-desc">Defesa do acesso a tratamentos, medicamentos e direitos dos pacientes.</div>
+    <p class="note" style="margin-top:14px">A análise considera CadÚnico, composição familiar e documentação comprobatória.</p>
+  </section>
+
+  <section style="background:var(--brand-beige)">
+    <div class="container">
+      <h2 class="section-title">Como funciona</h2>
+      <p class="section-sub">Um pipeline claro e sem fricção, da triagem ao resultado.</p>
+      <div class="steps">
+        <div class="step">
+          <strong>1) Triagem online</strong>
+          <p>Formulário objetivo para elegibilidade preliminar (3–5 minutos).</p>
+        </div>
+        <div class="step">
+          <strong>2) Análise jurídica</strong>
+          <p>Validação documental e parecer técnico com plano de ação.</p>
+        </div>
+        <div class="step">
+          <strong>3) Protocolo & acompanhamento</strong>
+          <p>Gestão processual e suporte consultivo contínuo.</p>
+        </div>
+        <div class="step">
+          <strong>4) Resultado & orientações</strong>
+          <p>Entrega clara, próximos passos e manutenção de conformidade.</p>
+        </div>
+      </div>
     </div>
   </section>
 
-  <section id="contato">
-    <h2>Contato</h2>
-    <p><strong>Localizado em:</strong> Torre Janete Costa</p>
-    <p><strong>Email:</strong> aluisio@timesadvogados.com.br</p>
-    <p><strong>Telefone:</strong> (81) 3032-3633</p>
-    <p><strong>Endereço:</strong> R. Padre Carapuceiro, nº 968 - sls 901/902 - Boa Viagem, Recife - PE, 51020-000</p>
+  <section class="container" id="porque-nos">
+    <h2 class="section-title">Por que fazer conosco</h2>
+    <ul class="bullets">
+      <li>Time com lastro em Direito Previdenciário e Assistencial</li>
+      <li>Checklist documental, modelos e curadoria de provas</li>
+      <li>Gestão ponta a ponta com SLAs, transparência e compliance</li>
+      <li>Atendimento humano e canal WhatsApp dedicado</li>
+    </ul>
   </section>
 
-  <footer>
-    &#169; 2025 Aluísio Times Advocacia. Todos os direitos reservados.
-  </footer>
+  <section class="container" id="faq">
+    <h2 class="section-title">Perguntas frequentes</h2>
+    <div class="faq">
+      <details>
+        <summary>Preciso estar no INSS?</summary>
+        <p>Não. O BPC/LOAS é um benefício assistencial, independente de contribuição. O que importa é cumprir os requisitos legais.</p>
+      </details>
+      <details>
+        <summary>Qual o valor do BPC?</summary>
+        <p>Corresponde a <strong>1 salário mínimo vigente</strong>, conforme legislação. Avaliação individual obrigatória.</p>
+      </details>
+      <details>
+        <summary>Posso acumular com outros benefícios?</summary>
+        <p>Como regra, não pode acumular com benefícios previdenciários de natureza não assistencial. Há exceções específicas.</p>
+      </details>
+      <details>
+        <summary>Como comprovar a renda?</summary>
+        <p>Usualmente via CadÚnico, contracheques, declarações e demais documentos. Orientamos quanto ao dossiê.</p>
+      </details>
+      <details>
+        <summary>E se o pedido for negado?</summary>
+        <p>Existem recursos administrativos e medidas judiciais cabíveis. Atuamos do protocolo ao contencioso, quando necessário.</p>
+      </details>
+    </div>
+  </section>
 
-  <script>
-    function toggleDesc(id) {
-      const el = document.getElementById(id);
-      el.style.display = el.style.display === 'block' ? 'none' : 'block';
-    }
-  </script>
+  <section style="background:linear-gradient(180deg,var(--brand-navy-2), var(--brand-navy));color:#fff" id="form">
+    <div class="container">
+      <h2 class="section-title" style="color:#fff">Verifique sua elegibilidade agora</h2>
+      <p class="section-sub" style="color:rgba(255,255,255,.9)">Preencha o formulário. Nossa equipe fará a triagem e entrará em contato.</p>
+
+      <form class="lead-form card panel" action="#" method="post" aria-label="Formulário de elegibilidade BPC/LOAS" onsubmit="alert('Recebido! Entraremos em contato.'); return false;">
+        <div>
+          <label for="nome">Nome completo</label>
+          <input id="nome" name="nome" required autocomplete="name" placeholder="Seu nome completo">
+        </div>
+        <div>
+          <label for="whats">WhatsApp</label>
+          <input id="whats" name="whats" type="tel" required inputmode="tel" placeholder="(DDD) 9 0000-0000">
+        </div>
+        <div>
+          <label for="email">E-mail</label>
+          <input id="email" name="email" type="email" required autocomplete="email" placeholder="voce@exemplo.com">
+        </div>
+        <div>
+          <label for="cidade">Cidade/UF</label>
+          <input id="cidade" name="cidade" placeholder="Recife/PE">
+        </div>
+        <div>
+          <label for="faixa">Faixa etária</label>
+          <select id="faixa" name="faixa" required>
+            <option value="">Selecione…</option>
+            <option>Menos de 18</option>
+            <option>18–29</option>
+            <option>30–49</option>
+            <option>50–64</option>
+            <option>65 ou mais</option>
+          </select>
+        </div>
+        <div>
+          <label for="situacao">Situação</label>
+          <select id="situacao" name="situacao" required>
+            <option value="">Selecione…</option>
+            <option>Idoso(a) (65+)</option>
+            <option>Pessoa com deficiência</option>
+            <option>Familiar de idoso/PCD</option>
+          </select>
+        </div>
+        <div>
+          <label for="renda">Renda familiar aproximada (total)</label>
+          <input id="renda" name="renda" inputmode="decimal" placeholder="Ex.: 1.200,00">
+        </div>
+        <div>
+          <label for="cad">Possui CadÚnico?</label>
+          <select id="cad" name="cad" required>
+            <option value="">Selecione…</option>
+            <option>Sim</option>
+            <option>Não</option>
+            <option>Não sei</option>
+          </select>
+        </div>
+        <div class="full">
+          <label for="mensagem">Mensagem (opcional)</label>
+          <textarea id="mensagem" name="mensagem" rows="3" placeholder="Conte em poucas linhas seu caso."></textarea>
+        </div>
+        <div class="full" style="font-size:clamp(12px,1.5vw,13px);color:rgba(255,255,255,.9)">
+          <input type="checkbox" id="lgpd" required>
+          <label for="lgpd" style="display:inline"> Ao enviar, concordo com a Política de Privacidade e com o uso dos meus dados para contato.</label>
+        </div>
+        <div class="full" style="display:flex;gap:10px;flex-wrap:wrap">
+          <button class="btn btn-primary" type="submit"><span>Verificar elegibilidade</span></button>
+          <a class="btn btn-outline-white whatsapp"
+             href="https://wa.me/5581989099929?text=Ol%C3%A1,%20tenho%20interesse%20em%20saber%20se%20tenho%20direito%20ao%20benef%C3%ADcio%20BPC/LOAS."
+             target="_blank" rel="nofollow noopener"><span>Falar no WhatsApp</span></a>
+        </div>
+        <p class="note full">Transparência total: o BPC corresponde a <strong>1 salário mínimo vigente</strong>. A concessão depende do cumprimento dos requisitos legais e análise individual.</p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="container grid" style="padding:22px 0">
+    <div>
+      <strong>Aluísio Times Adv</strong><br>
+      CNPJ 00.000.000/0001-00 • OAB/UF 00000<br>
+      Rua Exemplo, 123 — Bairro — Cidade/UF<br>
+      <a href="mailto:contato@aluisiotimesadv.com.br">contato@aluisiotimesadv.com.br</a> • (81) 98909-9929
+    </div>
+    <div>
+      <strong>Documentos</strong><br>
+      <a href="#">Política de Privacidade</a><br>
+      <a href="#">Termos de Uso</a>
+    </div>
+    <div>
+      <strong>Canais</strong><br>
+      <a class="whatsapp btn btn-outline-gold" href="https://wa.me/5581989099929?text=Ol%C3%A1,%20tenho%20interesse%20em%20saber%20se%20tenho%20direito%20ao%20benef%C3%ADcio%20BPC/LOAS." target="_blank" rel="nofollow noopener">WhatsApp</a><br>
+      <a href="#" target="_blank" rel="noopener">Instagram</a>
+    </div>
+  </div>
+</footer>
+
 </body>
 </html>
