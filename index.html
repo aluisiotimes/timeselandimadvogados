@@ -1,98 +1,371 @@
 <!doctype html>
 <html lang="pt-BR">
 <head>
-<meta charset="utf-8">
-<title>BPC/LOAS — Saiba se você tem direito</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Descubra se você pode receber o benefício BPC/LOAS, mesmo sem ter contribuído. Informações resumidas e contato para avaliação gratuita.">
-<style>
-  :root{
-    --navy:#0C1E33;
-    --navy2:#122742;
-    --gold:#C9A227;
-    --beige:#F3EDE2;
-    --line:#E5E7EB;
-  }
-  *{box-sizing:border-box}
-  html,body{margin:0;padding:0}
-  body{
-    font-family: Arial, Helvetica, sans-serif;
-    font-size:14px; line-height:1.6;
-    color:var(--navy); background:#fff;
-  }
-  h1{font-size:28px;margin-bottom:10px}
-  h2{font-size:20px;margin-bottom:8px;color:var(--gold)}
-  h3{font-size:16px;margin-bottom:6px}
-  p{margin:0 0 12px}
-  a.btn{display:inline-block;padding:14px 22px;border-radius:10px;font-weight:bold;text-decoration:none}
-  .btn-wa{border:2px solid #fff;color:#fff}
-  .btn-wa:hover{background:#fff;color:var(--navy)}
-  .wrap{max-width:1000px;margin:auto;padding:0 20px}
-  .hero{color:#fff;background:linear-gradient(180deg,var(--navy),var(--navy2));padding:50px 0}
-  .chips{display:flex;gap:10px;flex-wrap:wrap;margin:12px 0}
-  .chip{padding:6px 12px;border-radius:999px;border:1px solid rgba(255,255,255,.5);color:#fff}
-  section{padding:40px 0;border-top:1px solid var(--line)}
-  .feature{background:var(--beige);padding:18px;border-radius:12px;margin-bottom:14px}
-  footer{background:var(--beige);padding:25px 0;text-align:center;font-size:13px;color:#333}
-</style>
+  <meta charset="utf-8">
+  <title>Times, Guedes & Landim Advogados</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Times, Guedes & Landim Advogados — escritório com atuação tradicional em Direito Empresarial, Cível, Consumidor, Imobiliário, Família, Previdenciário e Trabalhista. Atendimento personalizado em Recife/PE.">
+  <style>
+    :root{
+      --navy:#0C1E33;
+      --navy2:#122742;
+      --gold:#C9A227;
+      --beige:#F3EDE2;
+      --line:#E5E7EB;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html,body{font-family:Arial,Helvetica,sans-serif;font-size:14px;line-height:1.6;color:var(--navy);background:#fff}
+    a{text-decoration:none;color:inherit}
+    h1{font-size:30px;margin-bottom:8px}
+    h2{font-size:22px;margin-bottom:10px;color:var(--gold)}
+    h3{font-size:16px;margin-bottom:6px}
+    p{margin-bottom:10px}
+
+    .wrap{max-width:1100px;margin:0 auto;padding:0 20px}
+
+    /* HEADER / HERO */
+    header{
+      background:linear-gradient(180deg,var(--navy),var(--navy2));
+      color:#fff;
+      position:relative;
+      overflow:hidden;
+    }
+    header::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:url("marca-d-agua.png") center/40% no-repeat;
+      opacity:0.08;       /* ajusta a força da marca d’água */
+      pointer-events:none;
+    }
+    .topbar{
+      position:relative;
+      z-index:1;
+      padding:10px 0 0;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:20px;
+    }
+    .topbar-logo{
+      display:flex;
+      align-items:center;
+      gap:12px;
+    }
+    .topbar-logo img{
+      height:52px;
+      width:auto;
+    }
+    .topbar-title{
+      font-size:16px;
+      font-weight:bold;
+    }
+    .topbar-contact{
+      font-size:13px;
+      text-align:right;
+    }
+    .hero{
+      position:relative;
+      z-index:1;
+      padding:40px 0 50px;
+      text-align:left;
+    }
+    .hero h1{max-width:520px}
+    .hero-sub{
+      max-width:520px;
+      margin-top:8px;
+      margin-bottom:18px;
+    }
+    .hero-chips{
+      display:flex;
+      flex-wrap:wrap;
+      gap:8px;
+      margin-bottom:18px;
+    }
+    .chip{
+      padding:6px 12px;
+      border-radius:999px;
+      border:1px solid rgba(255,255,255,.5);
+      font-size:12px;
+    }
+    .btn{
+      display:inline-block;
+      padding:12px 20px;
+      border-radius:999px;
+      font-weight:bold;
+      border:2px solid #fff;
+      color:#fff;
+    }
+    .btn:hover{
+      background:#fff;
+      color:var(--navy);
+    }
+    .btn-sec{
+      border-color:var(--gold);
+      color:var(--gold);
+      margin-left:10px;
+    }
+    .btn-sec:hover{
+      background:var(--gold);
+      color:var(--navy);
+    }
+
+    /* SECTIONS */
+    section{
+      padding:40px 0;
+      border-top:1px solid var(--line);
+    }
+    .cols{
+      display:grid;
+      grid-template-columns:2fr 1.3fr;
+      gap:30px;
+      align-items:flex-start;
+    }
+    .card{
+      background:var(--beige);
+      padding:18px 16px;
+      border-radius:10px;
+      margin-bottom:12px;
+    }
+    ul{padding-left:18px;margin-bottom:10px}
+    li{margin-bottom:6px}
+
+    .areas-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+      gap:12px;
+      margin-top:14px;
+    }
+    .area-box{
+      border:1px solid var(--line);
+      border-radius:10px;
+      padding:12px 10px;
+      background:#fff;
+    }
+    .badge{
+      display:inline-block;
+      font-size:11px;
+      padding:3px 8px;
+      border-radius:999px;
+      background:#EFF6FF;
+      color:var(--navy2);
+      margin-bottom:6px;
+    }
+
+    .section-cta{
+      background:linear-gradient(180deg,var(--navy2),var(--navy));
+      color:#fff;
+      text-align:center;
+    }
+
+    footer{
+      background:var(--beige);
+      padding:22px 0;
+      font-size:12px;
+      text-align:center;
+    }
+
+    /* RESPONSIVO */
+    @media(max-width:768px){
+      .topbar{
+        flex-direction:column;
+        align-items:flex-start;
+      }
+      .topbar-contact{text-align:left}
+      .hero{text-align:left}
+      .cols{grid-template-columns:1fr}
+      .btn-sec{display:block;margin:10px 0 0}
+    }
+  </style>
 </head>
 <body>
 
-<header class="hero">
+<header>
   <div class="wrap">
-    <h1>BPC/LOAS - Saiba se você tem direito</h1>
-    <p>O Benefício de Prestação Continuada garante <strong>1 salário mínimo</strong> mensal a <strong>idosos (65+)</strong> e <strong>pessoas com deficiência</strong> em situação de vulnerabilidade social, mesmo sem contribuições ao INSS.</p>
-    <div class="chips">
-      <span class="chip">Avaliação gratuita</span>
-      <span class="chip">Sigilo e segurança</span>
+    <div class="topbar">
+      <div class="topbar-logo">
+        <img src="logo.png" alt="Times, Guedes & Landim Advogados">
+        <div>
+          <div class="topbar-title">Times, Guedes & Landim Advogados</div>
+          <div style="font-size:12px;opacity:.8;">Atuação tradicional com foco em resultados consistentes</div>
+        </div>
+      </div>
+      <div class="topbar-contact">
+        <div>WhatsApp: (81) 98909-9929</div>
+        <div>E-mail: <a href="mailto:aluisio@timesadvogados.com.br" style="color:#fff;">aluisio@timesadvogados.com.br</a></div>
+      </div>
     </div>
-    <a class="btn btn-wa" href="https://wa.me/5581989099929?text=Ol%C3%A1,%20tenho%20interesse%20em%20saber%20se%20tenho%20direito%20ao%20benef%C3%ADcio%20BPC/LOAS." target="_blank" rel="nofollow noopener">Falar com um advogado</a>
+
+    <div class="hero">
+      <h1>Assessoria jurídica que alia tradição, técnica e proximidade com o cliente.</h1>
+      <p class="hero-sub">
+        Escritório com atuação em Direito Empresarial, Cível, Consumidor, Imobiliário, Família e demandas
+        previdenciárias e trabalhistas selecionadas, com foco em planejamento, prevenção de litígios
+        e condução estratégica de processos.
+      </p>
+      <div class="hero-chips">
+        <span class="chip">Atendimento personalizado</span>
+        <span class="chip">Visão de negócios</span>
+        <span class="chip">Atuação consultiva e contenciosa</span>
+      </div>
+      <a class="btn" href="https://wa.me/5581989099929?text=Ol%C3%A1,%20gostaria%20de%20falar%20com%20o%20escrit%C3%B3rio%20Times,%20Guedes%20%26%20Landim." target="_blank" rel="nofollow noopener">
+        Falar com um advogado
+      </a>
+      <a class="btn btn-sec" href="/bpc">
+        Ver página sobre BPC/LOAS
+      </a>
+    </div>
   </div>
 </header>
 
 <main>
+
+  <!-- SOBRE O ESCRITÓRIO -->
+  <section>
+    <div class="wrap cols">
+      <div>
+        <h2>Sobre o escritório</h2>
+        <p>
+          Times, Guedes & Landim Advogados nasce com uma proposta clara:
+          oferecer assessoria jurídica sólida, com base em fundamentos clássicos do Direito,
+          aliada a uma leitura atualizada da realidade empresarial e familiar.
+        </p>
+        <p>
+          A atuação é pautada em estudo técnico aprofundado, postura ética e
+          relacionamento próximo com o cliente, buscando sempre soluções seguras,
+          previsíveis e alinhadas ao perfil de risco de cada caso.
+        </p>
+        <div class="card">
+          <h3>Nosso modo de atuação</h3>
+          <ul>
+            <li>Análise minuciosa de documentos e cenários antes de qualquer medida judicial.</li>
+            <li>Preferência por composições vantajosas quando possível, sem perder firmeza na defesa.</li>
+            <li>Comunicação clara sobre riscos, prazos e expectativas de resultado.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div>
+        <h3>Perfil de clientes atendidos</h3>
+        <div class="card">
+          <ul>
+            <li>Empresas de pequeno, médio e grande porte.</li>
+            <li>Empresários, profissionais liberais e investidores.</li>
+            <li>Famílias que buscam segurança jurídica patrimonial e sucessória.</li>
+            <li>Pessoas físicas em situações específicas de vulnerabilidade (planos de saúde, benefícios, etc.).</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ÁREAS DE ATUAÇÃO -->
   <section>
     <div class="wrap">
-      <h2>Quem tem direito</h2>
-      <div class="feature">
+      <h2>Áreas de atuação</h2>
+      <p>
+        A estrutura do escritório foi pensada para acompanhar o ciclo de vida dos negócios e das famílias,
+        desde a fase preventiva até o contencioso estratégico.
+      </p>
+
+      <div class="areas-grid">
+        <div class="area-box">
+          <div class="badge">Empresarial</div>
+          <strong>Direito Empresarial e Contratos</strong>
+          <p>Constituição de empresas, contratos civis e comerciais, estruturação de negócios e gestão de risco jurídico.</p>
+        </div>
+
+        <div class="area-box">
+          <div class="badge">Cível</div>
+          <strong>Direito Cível e Obrigações</strong>
+          <p>Responsabilidade civil, cobranças, indenizações, inadimplemento contratual e conflitos patrimoniais em geral.</p>
+        </div>
+
+        <div class="area-box">
+          <div class="badge">Consumidor</div>
+          <strong>Relações de Consumo</strong>
+          <p>Atuação em favor de consumidores e empresas em litígios envolvendo bancos, planos de saúde, aéreas e fornecedores em geral.</p>
+        </div>
+
+        <div class="area-box">
+          <div class="badge">Imobiliário</div>
+          <strong>Direito Imobiliário</strong>
+          <p>Contratos de compra e venda, locação, usucapião, ações possessórias e regularização de imóveis.</p>
+        </div>
+
+        <div class="area-box">
+          <div class="badge">Família</div>
+          <strong>Direito de Família e Sucessões</strong>
+          <p>Divórcios, guarda, alimentos, união estável, planejamento sucessório e inventários.</p>
+        </div>
+
+        <div class="area-box">
+          <div class="badge">Previdenciário</div>
+          <strong>Previdenciário e Trabalhista (casos selecionados)</strong>
+          <p>Benefícios previdenciários, BPC/LOAS, aposentadorias e demandas trabalhistas estratégicas.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CHAMADA BPC / LOAS -->
+  <section class="section-cta">
+    <div class="wrap">
+      <h2 style="color:#fff;">Benefício BPC/LOAS</h2>
+      <p>
+        O escritório também atua na análise e condução de casos envolvendo o Benefício de Prestação Continuada (BPC/LOAS),
+        com foco em idosos e pessoas com deficiência em situação de vulnerabilidade.
+      </p>
+      <p style="margin-top:10px;margin-bottom:16px;">
+        Se você ou alguém da sua família pode se enquadrar nesses critérios, é possível realizar uma triagem jurídica inicial.
+      </p>
+      <a class="btn" href="/bpc">Acessar página específica do BPC/LOAS</a>
+    </div>
+  </section>
+
+  <!-- CONTATO -->
+  <section>
+    <div class="wrap cols">
+      <div>
+        <h2>Atendimento e canais de contato</h2>
+        <p>
+          O atendimento é realizado mediante agendamento prévio, de forma presencial ou virtual,
+          conforme a necessidade do cliente.
+        </p>
         <ul>
-          <li><strong>Idoso com 65 anos ou mais</strong> ou pessoa com deficiência (qualquer idade)</li>
-          <li><strong>Renda familiar por pessoa</strong> até ¼ do salário mínimo (podendo chegar a ½ em alguns casos)</li>
-          <li>Inscrição no <strong>CadÚnico</strong> atualizada</li>
-          <li>Sem acúmulo com outros benefícios assistenciais</li>
+          <li><strong>WhatsApp:</strong> (81) 98909-9929</li>
+          <li><strong>E-mail:</strong> <a href="mailto:aluisio@timesadvogados.com.br">aluisio@timesadvogados.com.br</a></li>
+          <li><strong>Instagram:</strong> <a href="https://www.instagram.com/timeslandim" target="_blank" rel="noopener">@timeslandim</a></li>
         </ul>
-        <p><strong>O valor do benefício é de 1 salário mínimo.</strong></p>
+        <a class="btn" href="https://wa.me/5581989099929?text=Ol%C3%A1,%20gostaria%20de%20agendar%20um%20hor%C3%A1rio%20com%20o%20escrit%C3%B3rio%20Times,%20Guedes%20%26%20Landim." target="_blank" rel="nofollow noopener">
+          Agendar contato pelo WhatsApp
+        </a>
       </div>
 
-      <div class="feature">
-        <h3>Para pessoas com deficiência</h3>
-        <p>É feita uma <strong>avaliação biopsicossocial</strong> que considera fatores físicos, mentais e sociais que limitem a autonomia e a participação na sociedade.</p>
-      </div>
-
-      <div class="feature">
-        <h3>Procure orientação jurídica</h3>
-        <p>O processo depende da análise de documentos e critérios legais. <strong>Procure um advogado de sua confiança</strong> para receber orientação personalizada e acompanhamento profissional.</p>
+      <div>
+        <h3>Endereço</h3>
+        <div class="card">
+          <p><strong>Times, Guedes & Landim Advogados</strong></p>
+          <p>
+            Rua Padre Carapuceiro, 968, salas 901/902<br>
+            Boa Viagem, Recife - PE • CEP 51.020-280
+          </p>
+          <p>Atendimento mediante agendamento.</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <section style="background:linear-gradient(180deg,var(--navy2),var(--navy));color:#fff">
-    <div class="wrap" style="text-align:center">
-      <h2 style="color:#fff">Falar com o escritório</h2>
-      <p>Converse pelo WhatsApp e tire suas dúvidas gratuitamente.</p>
-      <a class="btn btn-wa" href="https://wa.me/5581989099929?text=Ol%C3%A1,%20tenho%20interesse%20em%20saber%20se%20tenho%20direito%20ao%20benef%C3%ADcio%20BPC/LOAS." target="_blank" rel="nofollow noopener">Abrir WhatsApp</a>
-    </div>
-  </section>
 </main>
 
 <footer>
   <div class="wrap">
-    <strong>Aluísio Times Adv</strong> — OAB/PE 58243<br>
+    <strong>Times, Guedes & Landim Advogados</strong> — OAB/PE 58243<br>
     Rua Padre Carapuceiro, 968, sls.901/902, Boa Viagem, Recife-PE. CEP 51.020-280<br>
-    <a href="mailto:aluisio@timesadvogados.com.br">aluisio@timesadvogados.com.br</a> — (81) 98909-9929<br>
-    <span>CF art. 203 | Lei 8.742/93 | Lei 14.176/21 | Estatuto da Pessoa Idosa</span>
+    <span>Direito Empresarial • Cível • Consumidor • Imobiliário • Família • Previdenciário • Trabalhista (casos selecionados)</span>
   </div>
 </footer>
 
 </body>
 </html>
+
