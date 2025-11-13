@@ -1,108 +1,393 @@
-<section id="atuacao" class="section">
-  <div class="container">
-    <h2 class="section-title">Áreas de atuação</h2>
-    <p class="section-subtitle">
-      Portfólio de serviços jurídicos estruturado em áreas especializadas, com atuação técnica e
-      personalizada.
-    </p>
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <title>Times, Guedes & Landim Advogados</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Times, Guedes & Landim Advogados — escritório com atuação tradicional em Direito Empresarial, Cível, Consumidor, Imobiliário, Família, Previdenciário, Trabalhista e Tributário. Atendimento personalizado em Recife/PE.">
+  <style>
+    :root{
+      --navy:#0C1E33;
+      --navy2:#122742;
+      --gold:#C9A227;
+      --beige:#F3EDE2;
+      --line:#E5E7EB;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html,body{font-family:Arial,Helvetica,sans-serif;font-size:14px;line-height:1.6;color:var(--navy);background:#fff}
+    a{text-decoration:none;color:inherit}
+    h1{font-size:30px;margin-bottom:8px}
+    h2{font-size:22px;margin-bottom:10px;color:var(--gold)}
+    h3{font-size:16px;margin-bottom:6px}
+    p{margin-bottom:10px}
 
-    <div class="areas-grid">
+    .wrap{max-width:1100px;margin:0 auto;padding:0 20px}
 
-      <!-- EMPRESARIAL -->
-      <div class="area-card">
-        <span class="area-tag">Empresarial</span>
-        <h3 class="area-title">Contratos e gestão de negócios</h3>
-        <p>
-          Constituição de empresas, contratos civis e comerciais, estruturação societária,
-          negociação com parceiros estratégicos e gestão de risco jurídico em operações do dia a dia.
-        </p>
+    /* HEADER / HERO */
+    header{
+      background:linear-gradient(180deg,var(--navy),var(--navy2));
+      color:#fff;
+      position:relative;
+      overflow:hidden;
+    }
+    header::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:url("img/marca-d-agua.png") center/40% no-repeat;
+      opacity:0.08;
+      pointer-events:none;
+    }
+    .topbar{
+      position:relative;
+      z-index:1;
+      padding:10px 0 0;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:20px;
+    }
+    .topbar-logo{
+      display:flex;
+      align-items:center;
+      gap:12px;
+    }
+    .topbar-logo img{
+      height:52px;
+      width:auto;
+    }
+    .topbar-title{
+      font-size:16px;
+      font-weight:bold;
+    }
+    .topbar-contact{
+      font-size:13px;
+      text-align:right;
+    }
+    .hero{
+      position:relative;
+      z-index:1;
+      padding:40px 0 50px;
+      text-align:left;
+    }
+    .hero h1{max-width:520px}
+    .hero-sub{
+      max-width:520px;
+      margin-top:8px;
+      margin-bottom:18px;
+    }
+    .hero-chips{
+      display:flex;
+      flex-wrap:wrap;
+      gap:8px;
+      margin-bottom:18px;
+    }
+    .chip{
+      padding:6px 12px;
+      border-radius:999px;
+      border:1px solid rgba(255,255,255,.5);
+      font-size:12px;
+    }
+    .btn{
+      display:inline-block;
+      padding:12px 20px;
+      border-radius:999px;
+      font-weight:bold;
+      border:2px solid #fff;
+      color:#fff;
+    }
+    .btn:hover{
+      background:#fff;
+      color:var(--navy);
+    }
+    .btn-sec{
+      border-color:var(--gold);
+      color:var(--gold);
+      margin-left:10px;
+    }
+    .btn-sec:hover{
+      background:var(--gold);
+      color:var(--navy);
+    }
+
+    /* SECTIONS */
+    section{
+      padding:40px 0;
+      border-top:1px solid var(--line);
+    }
+    .cols{
+      display:grid;
+      grid-template-columns:2fr 1.3fr;
+      gap:30px;
+      align-items:flex-start;
+    }
+    .card{
+      background:var(--beige);
+      padding:18px 16px;
+      border-radius:10px;
+      margin-bottom:12px;
+    }
+    ul{padding-left:18px;margin-bottom:10px}
+    li{margin-bottom:6px}
+
+    .areas-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+      gap:12px;
+      margin-top:14px;
+    }
+    .area-box{
+      border:1px solid var(--line);
+      border-radius:10px;
+      padding:12px 10px;
+      background:#fff;
+    }
+    .badge{
+      display:inline-block;
+      font-size:11px;
+      padding:3px 8px;
+      border-radius:999px;
+      background:#EFF6FF;
+      color:var(--navy2);
+      margin-bottom:6px;
+    }
+
+    /* link discreto para BPC/LOAS na área previdenciária */
+    .bpc-link{
+      display:inline-block;
+      margin-top:6px;
+      font-size:12px;
+      padding:4px 10px;
+      border-radius:999px;
+      border:1px solid var(--line);
+      background:#F9FAFB;
+    }
+    .bpc-link:hover{
+      background:#EFF6FF;
+    }
+
+    .section-cta{
+      background:linear-gradient(180deg,var(--navy2),var(--navy));
+      color:#fff;
+      text-align:center;
+    }
+
+    footer{
+      background:var(--beige);
+      padding:22px 0;
+      font-size:12px;
+      text-align:center;
+    }
+
+    /* RESPONSIVO */
+    @media(max-width:768px){
+      .topbar{
+        flex-direction:column;
+        align-items:flex-start;
+      }
+      .topbar-contact{text-align:left}
+      .hero{text-align:left}
+      .cols{grid-template-columns:1fr}
+      .btn-sec{display:block;margin:10px 0 0}
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="topbar">
+      <div class="topbar-logo">
+        <img src="img/logo.png" alt="Times, Guedes & Landim Advogados">
+        <div>
+          <div class="topbar-title">Times, Guedes & Landim Advogados</div>
+          <div style="font-size:12px;opacity:.8;">Atuação tradicional com foco em resultados consistentes</div>
+        </div>
       </div>
-
-      <!-- TRIBUTÁRIO -->
-      <div class="area-card">
-        <span class="area-tag">Tributário</span>
-        <h3 class="area-title">Planejamento e contencioso fiscal</h3>
-        <p>
-          Planejamento tributário, atuação em autos de infração, execuções fiscais e recuperação de
-          créditos no âmbito administrativo e judicial, com foco em eficiência financeira.
-        </p>
+      <div class="topbar-contact">
+        <div>WhatsApp: (81) 98909-9929</div>
+        <div>E-mail: <a href="mailto:aluisio@timesadvogados.com.br" style="color:#fff;">aluisio@timesadvogados.com.br</a></div>
       </div>
+    </div>
 
-      <!-- CÍVEL -->
-      <div class="area-card">
-        <span class="area-tag">Cível</span>
-        <h3 class="area-title">Obrigações e responsabilidade</h3>
-        <p>
-          Cobranças, indenizações, inadimplemento contratual, conflitos patrimoniais em geral e
-          defesa técnica em demandas cíveis estratégicas.
-        </p>
+    <div class="hero">
+      <h1>Assessoria jurídica que alia tradição, técnica e proximidade com o cliente.</h1>
+      <p class="hero-sub">
+        Escritório com atuação em Direito Empresarial, Cível, Consumidor, Imobiliário, Família e demandas
+        previdenciárias e trabalhistas selecionadas, com foco em planejamento, prevenção de litígios
+        e condução estratégica de processos.
+      </p>
+      <div class="hero-chips">
+        <span class="chip">Atendimento personalizado</span>
+        <span class="chip">Visão de negócios</span>
+        <span class="chip">Atuação consultiva e contenciosa</span>
       </div>
-
-      <!-- CONSUMIDOR -->
-      <div class="area-card">
-        <span class="area-tag">Consumidor</span>
-        <h3 class="area-title">Relações de consumo bancárias e gerais</h3>
-        <p>
-          Atuação em favor de consumidores em litígios contra bancos, instituições financeiras,
-          planos de saúde, companhias aéreas e fornecedores em geral, com foco em recomposição de
-          perdas e danos.
-        </p>
-      </div>
-
-      <!-- IMOBILIÁRIO -->
-      <div class="area-card">
-        <span class="area-tag">Imobiliário</span>
-        <h3 class="area-title">Contratos, posse e propriedade</h3>
-        <p>
-          Contratos de compra e venda, locação, usucapião, ações possessórias, regularização
-          registral de imóveis e consultoria em operações imobiliárias.
-        </p>
-      </div>
-
-      <!-- FAMÍLIA E SUCESSÕES -->
-      <div class="area-card">
-        <span class="area-tag">Família e Sucessões</span>
-        <h3 class="area-title">Relações familiares e patrimônio</h3>
-        <p>
-          Divórcios, guarda, alimentos, união estável, pactos antenupciais, planejamento sucessório,
-          inventários judiciais e extrajudiciais.
-        </p>
-      </div>
-
-      <!-- PREVIDENCIÁRIO -->
-      <div class="area-card">
-        <span class="area-tag">Previdenciário</span>
-        <h3 class="area-title">Benefícios e aposentadorias</h3>
-        <p>
-          Benefícios previdenciários urbanos e rurais, aposentadorias, pensões, revisões de benefício
-          e demandas contra o INSS em geral.
-        </p>
-        <button class="bpc-btn" onclick="window.location.href='bpc-loas.html'">
-          Saiba mais sobre BPC/LOAS
-        </button>
-      </div>
-
-      <!-- TRABALHISTA (DESMEMBRADO) -->
-      <div class="area-card">
-        <span class="area-tag">Trabalhista</span>
-        <h3 class="area-title">Relações de trabalho e estratégia</h3>
-        <p>
-          Consultoria e contencioso trabalhista, reclamações individuais, acordos judiciais,
-          orientação preventiva para empresas e análise de risco em passivos trabalhistas.
-        </p>
-      </div>
-
-      <!-- MÉDICA / SAÚDE -->
-      <div class="area-card">
-        <span class="area-tag">Médica</span>
-        <h3 class="area-title">Planos de saúde e cobertura assistencial</h3>
-        <p>
-          Atuação em demandas envolvendo recusa de medicamentos indispensáveis ao paciente,
-          negativa de procedimentos, cirurgias e exames essenciais, além de aumentos e reajustes
-          considerados indevidos ou abusivos em planos de saúde.
-        </p>
-      </div>
-
+      <a class="btn" href="https://wa.me/5581989099929?text=Ol%C3%A1,%20gostaria%20de%20falar%20com%20o%20escrit%C3%B3rio%20Times,%20Guedes%20%26%20Landim." target="_blank" rel="nofollow noopener">
+        Falar com um advogado
+      </a>
+      <!-- botão BPC removido do hero para reduzir destaque -->
+      <!-- <a class="btn btn-sec" href="/bpc">
+        Ver página sobre BPC/LOAS
+      </a> -->
     </div>
   </div>
-</section>
+</header>
+
+<main>
+
+  <!-- SOBRE O ESCRITÓRIO -->
+  <section>
+    <div class="wrap cols">
+      <div>
+        <h2>Sobre o escritório</h2>
+        <p>
+          Times, Guedes & Landim Advogados nasce com uma proposta clara:
+          oferecer assessoria jurídica sólida, com base em fundamentos clássicos do Direito,
+          aliada a uma leitura atualizada da realidade empresarial e familiar.
+        </p>
+        <p>
+          A atuação é pautada em estudo técnico aprofundado, postura ética e
+          relacionamento próximo com o cliente, buscando sempre soluções seguras,
+          previsíveis e alinhadas ao perfil de risco de cada caso.
+        </p>
+        <div class="card">
+          <h3>Nosso modo de atuação</h3>
+          <ul>
+            <li>Análise minuciosa de documentos e cenários antes de qualquer medida judicial.</li>
+            <li>Preferência por composições vantajosas quando possível, sem perder firmeza na defesa.</li>
+            <li>Comunicação clara sobre riscos, prazos e expectativas de resultado.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div>
+        <h3>Perfil de clientes atendidos</h3>
+        <div class="card">
+          <ul>
+            <li>Empresas de pequeno, médio e grande porte.</li>
+            <li>Empresários, profissionais liberais e investidores.</li>
+            <li>Famílias que buscam segurança jurídica patrimonial e sucessória.</li>
+            <li>Pessoas físicas em situações específicas de vulnerabilidade (planos de saúde, benefícios, etc.).</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ÁREAS DE ATUAÇÃO -->
+  <section>
+    <div class="wrap">
+      <h2>Áreas de atuação</h2>
+      <p>
+        A estrutura do escritório foi pensada para acompanhar o ciclo de vida dos negócios e das famílias,
+        desde a fase preventiva até o contencioso estratégico.
+      </p>
+
+      <div class="areas-grid">
+        <div class="area-box">
+          <div class="badge">Empresarial</div>
+          <strong>Direito Empresarial e Contratos</strong>
+          <p>Constituição de empresas, contratos civis e comerciais, estruturação de negócios e gestão de risco jurídico.</p>
+        </div>
+
+        <div class="area-box">
+          <div class="badge">Tributário</div>
+          <strong>Direito Tributário</strong>
+          <p>Planejamento tributário, atuação em autos de infração, execuções fiscais e recuperação de créditos em âmbito administrativo e judicial.</p>
+        </div>
+
+        <div class="area-box">
+          <div class="badge">Cível</div>
+          <strong>Direito Cível e Obrigações</strong>
+          <p>Responsabilidade civil, cobranças, indenizações, inadimplemento contratual e conflitos patrimoniais em geral.</p>
+        </div>
+
+        <div class="area-box">
+          <div class="badge">Consumidor</div>
+          <strong>Relações de Consumo</strong>
+          <p>Atuação em favor de consumidores e empresas em litígios envolvendo bancos, planos de saúde, aéreas e fornecedores em geral.</p>
+        </div>
+
+        <div class="area-box">
+          <div class="badge">Imobiliário</div>
+          <strong>Direito Imobiliário</strong>
+          <p>Contratos de compra e venda, locação, usucapião, ações possessórias e regularização de imóveis.</p>
+        </div>
+
+        <div class="area-box">
+          <div class="badge">Família</div>
+          <strong>Direito de Família e Sucessões</strong>
+          <p>Divórcios, guarda, alimentos, união estável, planejamento sucessório e inventários.</p>
+        </div>
+
+        <div class="area-box">
+          <div class="badge">Previdenciário</div>
+          <strong>Previdenciário e Trabalhista (casos selecionados)</strong>
+          <p>Benefícios previdenciários, aposentadorias e demandas trabalhistas estratégicas.</p>
+          <a href="/bpc" class="bpc-link">Saiba mais sobre BPC/LOAS</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CHAMADA BPC / LOAS (removida para reduzir destaque)
+  <section class="section-cta">
+    <div class="wrap">
+      <h2 style="color:#fff;">Benefício BPC/LOAS</h2>
+      <p>
+        O escritório também atua na análise e condução de casos envolvendo o Benefício de Prestação Continuada (BPC/LOAS),
+        com foco em idosos e pessoas com deficiência em situação de vulnerabilidade.
+      </p>
+      <p style="margin-top:10px;margin-bottom:16px;">
+        Se você ou alguém da sua família pode se enquadrar nesses critérios, é possível realizar uma triagem jurídica inicial.
+      </p>
+      <a class="btn" href="/bpc">Acessar página específica do BPC/LOAS</a>
+    </div>
+  </section>
+  -->
+
+  <!-- CONTATO -->
+  <section>
+    <div class="wrap cols">
+      <div>
+        <h2>Atendimento e canais de contato</h2>
+        <p>
+          O atendimento é realizado mediante agendamento prévio, de forma presencial ou virtual,
+          conforme a necessidade do cliente.
+        </p>
+        <ul>
+          <li><strong>WhatsApp:</strong> (81) 98909-9929</li>
+          <li><strong>E-mail:</strong> <a href="mailto:aluisio@timesadvogados.com.br">aluisio@timesadvogados.com.br</a></li>
+          <li><strong>Instagram:</strong> <a href="https://www.instagram.com/timeslandim?igsh=NGRvN2V5OXpveGMx" target="_blank" rel="noopener">@timeslandim</a></li>
+        </ul>
+        <a class="btn" href="https://wa.me/5581989099929?text=Ol%C3%A1,%20gostaria%20de%20agendar%20um%20hor%C3%A1rio%20com%20o%20escrit%C3%B3rio%20Times,%20Guedes%20%26%20Landim." target="_blank" rel="nofollow noopener">
+          Agendar contato pelo WhatsApp
+        </a>
+      </div>
+
+      <div>
+        <h3>Endereço</h3>
+        <div class="card">
+          <p><strong>Times, Guedes & Landim Advogados</strong></p>
+          <p>
+            Rua Padre Carapuceiro, 968, salas 901/902<br>
+            Boa Viagem, Recife - PE • CEP 51.020-280
+          </p>
+          <p>Atendimento mediante agendamento.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <strong>Times, Guedes & Landim Advogados</strong> — OAB/PE 58243<br>
+    Rua Padre Carapuceiro, 968, sls.901/902, Boa Viagem, Recife-PE. CEP 51.020-280<br>
+    <span>Direito Empresarial • Cível • Consumidor • Imobiliário • Família • Previdenciário • Trabalhista (casos selecionados) • Tributário</span>
+  </div>
+</footer>
+
+</body>
+</html>
