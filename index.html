@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <title>Times, Guedes & Landim Advogados</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Times, Guedes & Landim Advogados — escritório com atuação tradicional em Direito Empresarial, Cível, Consumidor, Imobiliário, Família, Previdenciário e Trabalhista. Atendimento personalizado em Recife/PE.">
+  <meta name="description" content="Times, Guedes & Landim Advogados — escritório com atuação tradicional em Direito Empresarial, Cível, Consumidor, Imobiliário, Família, Previdenciário, Trabalhista e Tributário. Atendimento personalizado em Recife/PE.">
   <style>
     :root{
       --navy:#0C1E33;
@@ -35,7 +35,7 @@
       position:absolute;
       inset:0;
       background:url("img/marca-d-agua.png") center/40% no-repeat;
-      opacity:0.08;       /* ajusta a força da marca d’água */
+      opacity:0.08;
       pointer-events:none;
     }
     .topbar{
@@ -152,6 +152,20 @@
       margin-bottom:6px;
     }
 
+    /* link discreto para BPC/LOAS na área previdenciária */
+    .bpc-link{
+      display:inline-block;
+      margin-top:6px;
+      font-size:12px;
+      padding:4px 10px;
+      border-radius:999px;
+      border:1px solid var(--line);
+      background:#F9FAFB;
+    }
+    .bpc-link:hover{
+      background:#EFF6FF;
+    }
+
     .section-cta{
       background:linear-gradient(180deg,var(--navy2),var(--navy));
       color:#fff;
@@ -211,9 +225,10 @@
       <a class="btn" href="https://wa.me/5581989099929?text=Ol%C3%A1,%20gostaria%20de%20falar%20com%20o%20escrit%C3%B3rio%20Times,%20Guedes%20%26%20Landim." target="_blank" rel="nofollow noopener">
         Falar com um advogado
       </a>
-      <a class="btn btn-sec" href="/bpc">
+      <!-- botão BPC removido do hero para reduzir destaque -->
+      <!-- <a class="btn btn-sec" href="/bpc">
         Ver página sobre BPC/LOAS
-      </a>
+      </a> -->
     </div>
   </div>
 </header>
@@ -276,6 +291,12 @@
         </div>
 
         <div class="area-box">
+          <div class="badge">Tributário</div>
+          <strong>Direito Tributário</strong>
+          <p>Planejamento tributário, atuação em autos de infração, execuções fiscais e recuperação de créditos em âmbito administrativo e judicial.</p>
+        </div>
+
+        <div class="area-box">
           <div class="badge">Cível</div>
           <strong>Direito Cível e Obrigações</strong>
           <p>Responsabilidade civil, cobranças, indenizações, inadimplemento contratual e conflitos patrimoniais em geral.</p>
@@ -302,13 +323,14 @@
         <div class="area-box">
           <div class="badge">Previdenciário</div>
           <strong>Previdenciário e Trabalhista (casos selecionados)</strong>
-          <p>Benefícios previdenciários, BPC/LOAS, aposentadorias e demandas trabalhistas estratégicas.</p>
+          <p>Benefícios previdenciários, aposentadorias e demandas trabalhistas estratégicas.</p>
+          <a href="/bpc" class="bpc-link">Saiba mais sobre BPC/LOAS</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- CHAMADA BPC / LOAS -->
+  <!-- CHAMADA BPC / LOAS (removida para reduzir destaque)
   <section class="section-cta">
     <div class="wrap">
       <h2 style="color:#fff;">Benefício BPC/LOAS</h2>
@@ -322,6 +344,7 @@
       <a class="btn" href="/bpc">Acessar página específica do BPC/LOAS</a>
     </div>
   </section>
+  -->
 
   <!-- CONTATO -->
   <section>
@@ -335,7 +358,7 @@
         <ul>
           <li><strong>WhatsApp:</strong> (81) 98909-9929</li>
           <li><strong>E-mail:</strong> <a href="mailto:aluisio@timesadvogados.com.br">aluisio@timesadvogados.com.br</a></li>
-          <li><strong>Instagram:</strong> <a href="https://www.instagram.com/timeslandim" target="_blank" rel="noopener">@timeslandim</a></li>
+          <li><strong>Instagram:</strong> <a href="https://www.instagram.com/timeslandim?igsh=NGRvN2V5OXpveGMx" target="_blank" rel="noopener">@timeslandim</a></li>
         </ul>
         <a class="btn" href="https://wa.me/5581989099929?text=Ol%C3%A1,%20gostaria%20de%20agendar%20um%20hor%C3%A1rio%20com%20o%20escrit%C3%B3rio%20Times,%20Guedes%20%26%20Landim." target="_blank" rel="nofollow noopener">
           Agendar contato pelo WhatsApp
@@ -362,11 +385,9 @@
   <div class="wrap">
     <strong>Times, Guedes & Landim Advogados</strong> — OAB/PE 58243<br>
     Rua Padre Carapuceiro, 968, sls.901/902, Boa Viagem, Recife-PE. CEP 51.020-280<br>
-    <span>Direito Empresarial • Cível • Consumidor • Imobiliário • Família • Previdenciário • Trabalhista (casos selecionados)</span>
+    <span>Direito Empresarial • Cível • Consumidor • Imobiliário • Família • Previdenciário • Trabalhista (casos selecionados) • Tributário</span>
   </div>
 </footer>
 
 </body>
 </html>
-
-
