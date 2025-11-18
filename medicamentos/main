@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Extravio de Bagagem e Cancelamento de Voo — Saiba se você tem direito à indenização</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Descubra se você pode receber indenização por extravio de bagagem, atrasos e cancelamentos de voo. Conteúdo educativo e contato para avaliação gratuita.">
+<style>
+  :root{
+    --navy:#0C1E33;
+    --navy2:#122742;
+    --gold:#C9A227;
+    --beige:#F3EDE2;
+    --line:#E5E7EB;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0}
+  body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:14px; line-height:1.6;
+    color:var(--navy); background:#fff;
+  }
+  h1{font-size:28px;margin-bottom:10px}
+  h2{font-size:20px;margin-bottom:8px;color:var(--gold)}
+  h3{font-size:16px;margin-bottom:6px}
+  p{margin:0 0 12px}
+  a.btn{display:inline-block;padding:14px 22px;border-radius:10px;font-weight:bold;text-decoration:none}
+  .btn-wa{border:2px solid #fff;color:#fff}
+  .btn-wa:hover{background:#fff;color:var(--navy)}
+  .wrap{max-width:1000px;margin:auto;padding:0 20px}
+  .hero{color:#fff;background:linear-gradient(180deg,var(--navy),var(--navy2));padding:50px 0}
+  .chips{display:flex;gap:10px;flex-wrap:wrap;margin:12px 0}
+  .chip{padding:6px 12px;border-radius:999px;border:1px solid rgba(255,255,255,.5);color:#fff}
+  section{padding:40px 0;border-top:1px solid var(--line)}
+  .feature{background:var(--beige);padding:18px;border-radius:12px;margin-bottom:14px}
+  footer{background:var(--beige);padding:25px 0;text-align:center;font-size:13px;color:#333}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <h1>Extravio de Bagagem e Cancelamento de Voo</h1>
+    <p>Problemas como <strong>extravio de bagagem</strong>, <strong>atrasos</strong> e <strong>cancelamentos de voo</strong> podem gerar direito à <strong>indenização</strong>. Muitos passageiros desconhecem que podem ser compensados pelos danos sofridos.</p>
+    <div class="chips">
+      <span class="chip">Avaliação gratuita</span>
+      <span class="chip">Casos analisados individualmente</span>
+      <span class="chip">Sigilo e segurança</span>
+    </div>
+    <a class="btn btn-wa" href="https://wa.me/5581989099929?text=Olá,%20tive%20problemas%20em%20um%20voo%20e%20gostaria%20de%20saber%20se%20tenho%20direito%20a%20indenização." target="_blank" rel="nofollow noopener">Falar com um advogado</a>
+  </div>
+</header>
+
+<main>
+  <section>
+    <div class="wrap">
+      <h2>Quando pode existir direito à indenização</h2>
+      <div class="feature">
+        <ul>
+          <li><strong>Extravio, perda definitiva ou atraso significativo de bagagem</strong></li>
+          <li><strong>Cancelamento de voo</strong> sem assistência adequada</li>
+          <li><strong>Atrasos prolongados</strong> que geram prejuízos ao passageiro</li>
+          <li>Falta de informações claras ou descumprimento de deveres da companhia</li>
+        </ul>
+        <p><strong>Os valores variam conforme cada caso e os danos comprovados.</strong></p>
+      </div>
+
+      <div class="feature">
+        <h3>Como funciona na prática</h3>
+        <p>A análise envolve documentos como cartões de embarque, comprovantes, protocolos e registros do ocorrido. Cada situação tem particularidades que só podem ser avaliadas individualmente.</p>
+        <p><strong>É comum que companhias aéreas apresentem propostas de acordo antes mesmo da audiência</strong>, o que pode ser vantajoso ou não — depende da orientação profissional.</p>
+      </div>
+
+      <div class="feature">
+        <h3>Procure orientação jurídica</h3>
+        <p>Para saber se existe indenização cabível no seu caso, a recomendação é buscar <strong>um advogado de sua confiança</strong>. Ele poderá avaliar documentos, orientar sobre os próximos passos e acompanhar todo o processo.</p>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:linear-gradient(180deg,var(--navy2),var(--navy));color:#fff">
+    <div class="wrap" style="text-align:center">
+      <h2 style="color:#fff">Falar com o escritório</h2>
+      <p>Converse pelo WhatsApp e tire suas dúvidas gratuitamente.</p>
+      <a class="btn btn-wa" href="https://wa.me/5581989099929?text=Olá,%20tive%20problemas%20em%20um%20voo%20e%20gostaria%20de%20saber%20se%20tenho%20direito%20a%20indenização." target="_blank" rel="nofollow noopener">Abrir WhatsApp</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <strong>Aluísio Times Adv</strong> — OAB/PE 58243<br>
+    Rua Padre Carapuceiro, 968, sls.901/902, Boa Viagem, Recife-PE. CEP 51.020-280<br>
+    <a href="mailto:aluisio@timesadvogados.com.br">aluisio@timesadvogados.com.br</a> — (81) 98909-9929<br>
+    <span>CDC | Resoluções ANAC | Convenção de Montreal</span>
+  </div>
+</footer>
+
+</body>
+</html>
