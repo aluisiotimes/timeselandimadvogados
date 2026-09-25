@@ -6,7 +6,7 @@ Layout: modelo 47 (Neon noturno). Site estático em HTML e CSS, sem dependência
 - `index.html`: página inicial
 - `blog/`: lista de artigos e `blog/bpc-loas-quem-tem-direito/` (artigo modelo, em rascunho)
 - `bpc/`: página do BPC/LOAS
-- `img/`: logos (SVG) e fotos (JPG e WebP)
+- `img/`: logos (SVG) e fotos (JPG)
 - `vercel.json`, `robots.txt`, `sitemap.xml`
 
 ## Como publicar
