@@ -13,6 +13,5 @@ Layout: modelo 47 (Neon noturno). Site estático em HTML e CSS, sem dependência
 Copie o conteúdo desta pasta para a raiz do repositório no GitHub. A Vercel publica automaticamente após o commit.
 
 ## Pendências (marcadas com borda vermelha tracejada no site)
-- Nome e OAB dos demais integrantes da equipe
 - Registro da sociedade na OAB/PE
 - Revisão do artigo do blog antes de publicar
