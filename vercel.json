@@ -1,4 +1,8 @@
 {
   "cleanUrls": true,
-  "trailingSlash": true
+  "trailingSlash": true,
+  "redirects": [
+    { "source": "/blog/bpc-loas-quem-tem-direito", "destination": "/bpc/", "permanent": true },
+    { "source": "/blog/bpc-loas-quem-tem-direito/", "destination": "/bpc/", "permanent": true }
+  ]
 }
